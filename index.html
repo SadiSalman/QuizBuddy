@@ -409,6 +409,576 @@
       transform: translateY(0);
     }
 
+    /* Page Navigation */
+    .page-content {
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Filter Bar */
+    .filter-bar {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 0.5rem 1.25rem;
+      background: white;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: #4b5563;
+    }
+
+    .filter-btn:hover {
+      border-color: #6366f1;
+      color: #6366f1;
+    }
+
+    .filter-btn.active {
+      background: #6366f1;
+      border-color: #6366f1;
+      color: white;
+    }
+
+    /* Subject Detail Grid */
+    .subject-detail-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .subject-detail-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .subject-detail-card h2 {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.75rem;
+      margin: 0 0 1.5rem 0;
+    }
+
+    .subject-detail-card .subject-icon {
+      font-size: 2.5rem;
+    }
+
+    .subject-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .subject-item {
+      padding: 1rem;
+      background: #f9fafb;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .subject-item:hover {
+      background: #f3f4f6;
+      transform: translateX(4px);
+    }
+
+    .subject-item h4 {
+      margin: 0 0 0.5rem 0;
+      color: #1a1a1a;
+    }
+
+    .subject-item p {
+      margin: 0;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    /* Blog Grid */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .blog-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+    }
+
+    .blog-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+
+    .blog-content {
+      padding: 1.5rem;
+    }
+
+    .blog-category {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #6366f1;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+      color: #1a1a1a;
+    }
+
+    .blog-excerpt {
+      color: #6b7280;
+      font-size: 0.95rem;
+      margin: 0 0 1rem 0;
+      line-height: 1.6;
+    }
+
+    .blog-meta {
+      color: #9ca3af;
+      font-size: 0.85rem;
+    }
+
+    /* About Content */
+    .about-content {
+      display: grid;
+      gap: 2rem;
+      max-width: 800px;
+    }
+
+    .about-section {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .about-section h2 {
+      color: #6366f1;
+      margin: 0 0 1rem 0;
+      font-size: 1.5rem;
+    }
+
+    .about-section p {
+      color: #4b5563;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* Contact Content */
+    .contact-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      max-width: 1000px;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #6366f1;
+    }
+
+    .contact-info {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      height: fit-content;
+    }
+
+    .contact-info h3 {
+      margin: 0 0 1.5rem 0;
+      color: #1a1a1a;
+    }
+
+    .social-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .social-links li {
+      padding: 0.75rem 0;
+      color: #4b5563;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .social-links li:last-child {
+      border-bottom: none;
+    }
+
+    /* Quiz Player */
+    .quiz-player {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .quiz-header {
+      margin-bottom: 2rem;
+    }
+
+    .back-btn {
+      background: white;
+      border: 2px solid #e5e7eb;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: #4b5563;
+      margin-bottom: 1rem;
+    }
+
+    .back-btn:hover {
+      border-color: #6366f1;
+      color: #6366f1;
+    }
+
+    .quiz-progress {
+      text-align: center;
+    }
+
+    .quiz-progress span {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #4b5563;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      background: #e5e7eb;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: #6366f1;
+      transition: width 0.3s ease;
+    }
+
+    .quiz-question-card {
+      background: white;
+      border-radius: 12px;
+      padding: 3rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+    }
+
+    .question-text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0 0 2rem 0;
+      color: #1a1a1a;
+      line-height: 1.5;
+    }
+
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .quiz-option {
+      background: #f9fafb;
+      border: 2px solid #e5e7eb;
+      padding: 1.25rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 1.1rem;
+      text-align: left;
+    }
+
+    .quiz-option:hover {
+      border-color: #6366f1;
+      background: #f3f4f6;
+    }
+
+    .quiz-option.selected {
+      border-color: #6366f1;
+      background: #eef2ff;
+    }
+
+    .quiz-option.correct {
+      border-color: #10b981;
+      background: #d1fae5;
+    }
+
+    .quiz-option.incorrect {
+      border-color: #ef4444;
+      background: #fee2e2;
+    }
+
+    .quiz-option.disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    .quiz-feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+
+    .quiz-feedback.correct {
+      background: #d1fae5;
+      color: #065f46;
+    }
+
+    .quiz-feedback.incorrect {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .quiz-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .quiz-results {
+      background: white;
+      border-radius: 12px;
+      padding: 3rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .results-score {
+      font-size: 4rem;
+      font-weight: 800;
+      color: #6366f1;
+      margin: 1rem 0;
+    }
+
+    .results-message {
+      font-size: 1.5rem;
+      color: #4b5563;
+      margin-bottom: 2rem;
+    }
+
+    .results-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .stat-item {
+      padding: 1.5rem;
+      background: #f9fafb;
+      border-radius: 8px;
+    }
+
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    .stat-label {
+      color: #6b7280;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Flashcard Player */
+    .flashcard-player {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .flashcard-header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .flashcard-progress {
+      margin-top: 1rem;
+    }
+
+    .flashcard-progress span {
+      font-weight: 600;
+      color: #4b5563;
+    }
+
+    .flashcard-container {
+      perspective: 1000px;
+      margin-bottom: 2rem;
+    }
+
+    .flashcard {
+      width: 100%;
+      height: 400px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .flashcard-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .flashcard.flipped .flashcard-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flashcard-front,
+    .flashcard-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background: white;
+      border-radius: 12px;
+      padding: 3rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flashcard-back {
+      transform: rotateY(180deg);
+    }
+
+    .card-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #6366f1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-content {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .flashcard-hint {
+      text-align: center;
+      color: #9ca3af;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .flashcard-controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .control-btn {
+      padding: 1rem 2rem;
+      background: white;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: #4b5563;
+    }
+
+    .control-btn:hover {
+      border-color: #6366f1;
+      color: #6366f1;
+    }
+
+    .control-btn.primary {
+      background: #6366f1;
+      border-color: #6366f1;
+      color: white;
+    }
+
+    .control-btn.primary:hover {
+      background: #4f46e5;
+    }
+
+    .control-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2rem;
@@ -425,6 +995,39 @@
       .newsletter h2 {
         font-size: 1.5rem;
       }
+
+      .contact-content {
+        grid-template-columns: 1fr;
+      }
+
+      .quiz-question-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .question-text {
+        font-size: 1.25rem;
+      }
+
+      .quiz-option {
+        font-size: 1rem;
+      }
+
+      .results-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .flashcard {
+        height: 350px;
+      }
+
+      .flashcard-front,
+      .flashcard-back {
+        padding: 2rem;
+      }
+
+      .card-content {
+        font-size: 1.5rem;
+      }
     }
   </style>
   <style>@view-transition { navigation: auto; }</style>
@@ -435,35 +1038,166 @@
   <header>
    <nav>
     <div class="logo" id="site-name">
-     QuizBuddy
+     StudyHub
     </div>
-    <div class="nav-links"><a href="#subjects">Subjects</a> <a href="#flashcards">Flashcards</a> <a href="#quizzes">Quizzes</a> <a href="#blog">Blog</a> <a href="#about">About</a> <a href="#contact">Contact</a>
+    <div class="nav-links"><a href="#home" data-page="home">Home</a> <a href="#subjects" data-page="subjects">Subjects</a> <a href="#flashcards" data-page="flashcards">Flashcards</a> <a href="#quizzes" data-page="quizzes">Quizzes</a> <a href="#blog" data-page="blog">Blog</a> <a href="#about" data-page="about">About</a> <a href="#contact" data-page="contact">Contact</a>
     </div>
    </nav>
-  </header>
-  <section class="hero">
-   <div class="hero-content">
-    <h1 id="hero-title">QuizBuddy</h1>
-    <p id="hero-tagline">Prep smarter. Learn faster.</p>
-    <div class="cta-buttons"><button class="btn btn-primary" id="cta-primary">Start a Quiz</button> <button class="btn btn-secondary" id="cta-secondary">Browse Flashcards</button>
+  </header><!-- Home Page -->
+  <div id="page-home" class="page-content">
+   <section class="hero">
+    <div class="hero-content">
+     <h1 id="hero-title">StudyHub</h1>
+     <p id="hero-tagline">Prep smarter. Learn faster.</p>
+     <div class="cta-buttons"><button class="btn btn-primary" id="cta-primary">Start a Quiz</button> <button class="btn btn-secondary" id="cta-secondary">Browse Flashcards</button>
+     </div>
+    </div>
+   </section>
+   <div class="container">
+    <h2 class="section-title" id="featured-title">Featured Flashcard Decks</h2>
+    <div class="deck-grid" id="deck-grid"><!-- Decks will be populated by JavaScript -->
+    </div>
+    <h2 class="section-title" id="popular-title">Popular Quizzes</h2>
+    <div class="quiz-list" id="quiz-list"><!-- Quizzes will be populated by JavaScript -->
+    </div>
+    <h2 class="section-title" id="subjects-title">Explore by Subject</h2>
+    <div class="subject-grid" id="subject-grid"><!-- Subjects will be populated by JavaScript -->
+    </div>
+    <div class="newsletter">
+     <h2 id="newsletter-title">Stay Updated</h2>
+     <p id="newsletter-description">Get weekly study tips and new content delivered to your inbox</p>
+     <form class="newsletter-form" id="newsletter-form"><input type="email" class="newsletter-input" placeholder="Enter your email" required> <button type="submit" class="newsletter-btn" id="newsletter-button">Subscribe</button>
+     </form>
     </div>
    </div>
-  </section>
-  <div class="container">
-   <h2 class="section-title" id="featured-title">Featured Flashcard Decks</h2>
-   <div class="deck-grid" id="deck-grid"><!-- Decks will be populated by JavaScript -->
+  </div><!-- Subjects Page -->
+  <div id="page-subjects" class="page-content" style="display: none;">
+   <div class="container">
+    <h1 class="section-title">All Subjects</h1>
+    <div class="subject-detail-grid" id="subject-detail-grid"><!-- Subject details will be populated by JavaScript -->
+    </div>
    </div>
-   <h2 class="section-title" id="popular-title">Popular Quizzes</h2>
-   <div class="quiz-list" id="quiz-list"><!-- Quizzes will be populated by JavaScript -->
+  </div><!-- Flashcards Page -->
+  <div id="page-flashcards" class="page-content" style="display: none;">
+   <div class="container">
+    <h1 class="section-title">Flashcard Decks</h1>
+    <div class="filter-bar"><button class="filter-btn active" data-filter="all">All</button> <button class="filter-btn" data-filter="ML">Machine Learning</button> <button class="filter-btn" data-filter="Web Dev">Web Dev</button> <button class="filter-btn" data-filter="Simulation">Simulation</button> <button class="filter-btn" data-filter="Theory">Theory</button>
+    </div>
+    <div class="deck-grid" id="flashcards-grid"><!-- Flashcards will be populated by JavaScript -->
+    </div>
    </div>
-   <h2 class="section-title" id="subjects-title">Explore by Subject</h2>
-   <div class="subject-grid" id="subject-grid"><!-- Subjects will be populated by JavaScript -->
+  </div><!-- Flashcard Player -->
+  <div id="page-flashcard-player" class="page-content" style="display: none;">
+   <div class="container">
+    <div class="flashcard-player">
+     <div class="flashcard-header"><button class="back-btn" id="flashcard-back-btn">← Back to Decks</button>
+      <div class="flashcard-progress"><span id="flashcard-progress-text">Card 1 of 10</span>
+      </div>
+     </div>
+     <div class="flashcard-container">
+      <div class="flashcard" id="flashcard">
+       <div class="flashcard-inner">
+        <div class="flashcard-front">
+         <div class="card-label">
+          Question
+         </div>
+         <div class="card-content" id="flashcard-question">
+          Click to reveal answer
+         </div>
+        </div>
+        <div class="flashcard-back">
+         <div class="card-label">
+          Answer
+         </div>
+         <div class="card-content" id="flashcard-answer">
+          Answer appears here
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="flashcard-hint">
+       Click card to flip
+      </div>
+     </div>
+     <div class="flashcard-controls"><button class="control-btn" id="prev-card-btn">← Previous</button> <button class="control-btn primary" id="next-card-btn">Next →</button>
+     </div>
+    </div>
    </div>
-   <div class="newsletter">
-    <h2 id="newsletter-title">Stay Updated</h2>
-    <p id="newsletter-description">Get weekly study tips and new content delivered to your inbox</p>
-    <form class="newsletter-form" id="newsletter-form"><input type="email" class="newsletter-input" placeholder="Enter your email" required> <button type="submit" class="newsletter-btn" id="newsletter-button">Subscribe</button>
-    </form>
+  </div><!-- Quizzes Page -->
+  <div id="page-quizzes" class="page-content" style="display: none;">
+   <div class="container">
+    <h1 class="section-title">All Quizzes</h1>
+    <div class="filter-bar"><button class="filter-btn active" data-filter="all">All</button> <button class="filter-btn" data-filter="easy">Easy</button> <button class="filter-btn" data-filter="medium">Medium</button> <button class="filter-btn" data-filter="hard">Hard</button>
+    </div>
+    <div class="quiz-list" id="quizzes-list"><!-- Quizzes will be populated by JavaScript -->
+    </div>
+   </div>
+  </div><!-- Quiz Player -->
+  <div id="page-quiz-player" class="page-content" style="display: none;">
+   <div class="container">
+    <div class="quiz-player">
+     <div class="quiz-header"><button class="back-btn" id="quiz-back-btn">← Back to Quizzes</button>
+      <div class="quiz-progress"><span id="quiz-progress-text">Question 1 of 5</span>
+       <div class="progress-bar">
+        <div class="progress-fill" id="quiz-progress-fill"></div>
+       </div>
+      </div>
+     </div>
+     <div class="quiz-content" id="quiz-content"><!-- Quiz questions will be populated here -->
+     </div>
+    </div>
+   </div>
+  </div><!-- Blog Page -->
+  <div id="page-blog" class="page-content" style="display: none;">
+   <div class="container">
+    <h1 class="section-title">Blog</h1>
+    <div class="blog-grid" id="blog-grid"><!-- Blog posts will be populated by JavaScript -->
+    </div>
+   </div>
+  </div><!-- About Page -->
+  <div id="page-about" class="page-content" style="display: none;">
+   <div class="container">
+    <h1 class="section-title">About StudyHub</h1>
+    <div class="about-content">
+     <div class="about-section">
+      <h2>Why This Site Exists</h2>
+      <p>StudyHub was created to help students learn more effectively through interactive flashcards and quizzes. We believe that active recall and spaced repetition are the keys to mastering any subject.</p>
+     </div>
+     <div class="about-section">
+      <h2>Our Mission</h2>
+      <p>To provide free, high-quality study materials that make learning engaging and effective for everyone.</p>
+     </div>
+     <div class="about-section">
+      <h2>Tech Stack</h2>
+      <p>Built with modern web technologies including HTML5, CSS3, and JavaScript. Designed to be fast, responsive, and accessible.</p>
+     </div>
+    </div>
+   </div>
+  </div><!-- Contact Page -->
+  <div id="page-contact" class="page-content" style="display: none;">
+   <div class="container">
+    <h1 class="section-title">Contact Us</h1>
+    <div class="contact-content">
+     <form class="contact-form" id="contact-form">
+      <div class="form-group"><label for="contact-name">Name</label> <input type="text" id="contact-name" required>
+      </div>
+      <div class="form-group"><label for="contact-email">Email</label> <input type="email" id="contact-email" required>
+      </div>
+      <div class="form-group"><label for="contact-subject">Subject</label> <input type="text" id="contact-subject" required>
+      </div>
+      <div class="form-group"><label for="contact-message">Message</label> <textarea id="contact-message" rows="6" required></textarea>
+      </div><button type="submit" class="btn btn-primary">Send Message</button>
+     </form>
+     <div class="contact-info">
+      <h3>Connect With Us</h3>
+      <ul class="social-links">
+       <li>📧 Email: hello@studyhub.com</li>
+       <li>💼 LinkedIn: /studyhub</li>
+       <li>🐙 GitHub: /studyhub</li>
+       <li>🐦 Twitter: @studyhub</li>
+      </ul>
+     </div>
+    </div>
    </div>
   </div>
   <footer>
@@ -496,13 +1230,13 @@
     </div>
    </div>
    <div class="footer-bottom">
-    <p>© 2025 QuizBuddy. All rights reserved.</p>
+    <p>© 2024 StudyHub. All rights reserved.</p>
    </div>
   </footer>
   <div class="toast" id="toast"></div>
   <script>
     const defaultConfig = {
-      site_name: "QuizBuddy",
+      site_name: "StudyHub",
       tagline: "Prep smarter. Learn faster.",
       cta_primary: "Start a Quiz",
       cta_secondary: "Browse Flashcards",
@@ -519,6 +1253,9 @@
       secondary_action_color: "#667eea"
     };
 
+    // Current page state
+    let currentPage = 'home';
+
     // Sample data
     const featuredDecks = [
       { icon: "🤖", title: "Machine Learning Basics", cards: 45, subject: "ML" },
@@ -527,10 +1264,395 @@
       { icon: "💻", title: "Data Structures", cards: 50, subject: "Theory" }
     ];
 
+    const allDecks = [
+      { 
+        id: 1,
+        icon: "🤖", 
+        title: "Machine Learning Basics", 
+        cards: 45, 
+        subject: "ML",
+        flashcards: [
+          { question: "What is Machine Learning?", answer: "A subset of AI that enables systems to learn and improve from experience without being explicitly programmed." },
+          { question: "What is a training set?", answer: "A dataset used to train a machine learning model by learning patterns and relationships." },
+          { question: "What is a test set?", answer: "A dataset used to evaluate the performance of a trained model on unseen data." },
+          { question: "What is overfitting?", answer: "When a model learns the training data too well, including noise, and performs poorly on new data." },
+          { question: "What is underfitting?", answer: "When a model is too simple to capture the underlying patterns in the data." },
+          { question: "What is a feature?", answer: "An individual measurable property or characteristic used as input for a machine learning model." },
+          { question: "What is a label?", answer: "The output or target variable that a supervised learning model tries to predict." },
+          { question: "What is gradient descent?", answer: "An optimization algorithm used to minimize the loss function by iteratively adjusting model parameters." },
+          { question: "What is a loss function?", answer: "A function that measures how well a model's predictions match the actual values." },
+          { question: "What is cross-validation?", answer: "A technique to assess model performance by splitting data into multiple train-test sets." }
+        ]
+      },
+      { 
+        id: 2,
+        icon: "🤖", 
+        title: "Neural Networks Deep Dive", 
+        cards: 38, 
+        subject: "ML",
+        flashcards: [
+          { question: "What is a neural network?", answer: "A computational model inspired by biological neurons, consisting of interconnected layers of nodes." },
+          { question: "What is a perceptron?", answer: "The simplest type of neural network with a single layer, used for binary classification." },
+          { question: "What is an activation function?", answer: "A function that introduces non-linearity into the network, enabling it to learn complex patterns." },
+          { question: "What is backpropagation?", answer: "An algorithm for training neural networks by computing gradients and updating weights backward through layers." },
+          { question: "What is a hidden layer?", answer: "Layers between input and output that transform data through weighted connections and activations." },
+          { question: "What is ReLU?", answer: "Rectified Linear Unit - an activation function that outputs the input if positive, otherwise zero." },
+          { question: "What is dropout?", answer: "A regularization technique that randomly deactivates neurons during training to prevent overfitting." },
+          { question: "What is batch normalization?", answer: "A technique that normalizes layer inputs to improve training speed and stability." },
+          { question: "What is a convolutional layer?", answer: "A layer that applies filters to detect spatial patterns, commonly used in image processing." },
+          { question: "What is transfer learning?", answer: "Using a pre-trained model as a starting point for a new but related task." }
+        ]
+      },
+      { 
+        id: 3,
+        icon: "🌐", 
+        title: "Web Development Fundamentals", 
+        cards: 60, 
+        subject: "Web Dev",
+        flashcards: [
+          { question: "What is HTML?", answer: "HyperText Markup Language - the standard language for creating web pages and applications." },
+          { question: "What is CSS?", answer: "Cascading Style Sheets - a language used to describe the presentation and styling of HTML documents." },
+          { question: "What is JavaScript?", answer: "A programming language that enables interactive and dynamic behavior on web pages." },
+          { question: "What is the DOM?", answer: "Document Object Model - a programming interface that represents HTML documents as a tree structure." },
+          { question: "What is responsive design?", answer: "An approach to web design that makes pages render well on various devices and screen sizes." },
+          { question: "What is a CSS selector?", answer: "A pattern used to select and style HTML elements." },
+          { question: "What is the box model?", answer: "A CSS concept describing how elements are rendered with content, padding, border, and margin." },
+          { question: "What is an API?", answer: "Application Programming Interface - a set of rules for building and interacting with software applications." },
+          { question: "What is AJAX?", answer: "Asynchronous JavaScript and XML - a technique for creating dynamic web pages without reloading." },
+          { question: "What is a CDN?", answer: "Content Delivery Network - a distributed system of servers that delivers web content based on user location." }
+        ]
+      },
+      { 
+        id: 4,
+        icon: "🌐", 
+        title: "React Essentials", 
+        cards: 42, 
+        subject: "Web Dev",
+        flashcards: [
+          { question: "What is React?", answer: "A JavaScript library for building user interfaces, particularly single-page applications." },
+          { question: "What is a component?", answer: "A reusable, self-contained piece of UI that can accept inputs (props) and return React elements." },
+          { question: "What are props?", answer: "Short for properties - read-only data passed from parent to child components." },
+          { question: "What is state?", answer: "An object that holds data that may change over the component's lifetime." },
+          { question: "What is JSX?", answer: "JavaScript XML - a syntax extension that allows writing HTML-like code in JavaScript." },
+          { question: "What is a hook?", answer: "A function that lets you use state and other React features in functional components." },
+          { question: "What is useState?", answer: "A hook that allows functional components to have state variables." },
+          { question: "What is useEffect?", answer: "A hook for performing side effects in functional components, like data fetching or subscriptions." },
+          { question: "What is virtual DOM?", answer: "A lightweight copy of the actual DOM that React uses to optimize updates and rendering." },
+          { question: "What is reconciliation?", answer: "The process React uses to update the DOM by comparing the virtual DOM with the previous version." }
+        ]
+      },
+      { 
+        id: 5,
+        icon: "📊", 
+        title: "Simulation Theory", 
+        cards: 30, 
+        subject: "Simulation",
+        flashcards: [
+          { question: "What is a simulation?", answer: "A model that imitates the operation of a real-world process or system over time." },
+          { question: "What is Monte Carlo simulation?", answer: "A technique that uses random sampling to obtain numerical results for complex problems." },
+          { question: "What is discrete event simulation?", answer: "A simulation where the system changes at specific points in time due to events." },
+          { question: "What is continuous simulation?", answer: "A simulation where the system state changes continuously over time." },
+          { question: "What is a stochastic process?", answer: "A process involving random variables that evolve over time." },
+          { question: "What is variance reduction?", answer: "Techniques used to decrease the variance of simulation estimates without increasing sample size." },
+          { question: "What is importance sampling?", answer: "A variance reduction technique that samples from a different distribution to improve efficiency." },
+          { question: "What is a random number generator?", answer: "An algorithm that produces sequences of numbers that approximate random behavior." },
+          { question: "What is convergence?", answer: "The property that simulation results approach the true value as sample size increases." },
+          { question: "What is sensitivity analysis?", answer: "The study of how uncertainty in model output can be attributed to different input variations." }
+        ]
+      },
+      { 
+        id: 6,
+        icon: "💻", 
+        title: "Data Structures", 
+        cards: 50, 
+        subject: "Theory",
+        flashcards: [
+          { question: "What is an array?", answer: "A collection of elements stored at contiguous memory locations, accessed by index." },
+          { question: "What is a linked list?", answer: "A linear data structure where elements are stored in nodes, each pointing to the next node." },
+          { question: "What is a stack?", answer: "A Last-In-First-Out (LIFO) data structure with push and pop operations." },
+          { question: "What is a queue?", answer: "A First-In-First-Out (FIFO) data structure with enqueue and dequeue operations." },
+          { question: "What is a tree?", answer: "A hierarchical data structure with a root node and child nodes forming a parent-child relationship." },
+          { question: "What is a binary tree?", answer: "A tree where each node has at most two children, referred to as left and right child." },
+          { question: "What is a hash table?", answer: "A data structure that maps keys to values using a hash function for fast lookup." },
+          { question: "What is a graph?", answer: "A collection of nodes (vertices) connected by edges, representing relationships." },
+          { question: "What is a heap?", answer: "A specialized tree-based structure that satisfies the heap property (min-heap or max-heap)." },
+          { question: "What is Big O notation?", answer: "A mathematical notation describing the limiting behavior of an algorithm's time or space complexity." }
+        ]
+      }
+    ];
+
     const popularQuizzes = [
-      { title: "ML Algorithms Quiz", questions: 20, time: "15 min" },
-      { title: "JavaScript Fundamentals", questions: 25, time: "20 min" },
-      { title: "Monte Carlo Methods", questions: 15, time: "12 min" }
+      { title: "ML Algorithms Quiz", questions: 20, time: "15 min", difficulty: "medium" },
+      { title: "JavaScript Fundamentals", questions: 25, time: "20 min", difficulty: "easy" },
+      { title: "Monte Carlo Methods", questions: 15, time: "12 min", difficulty: "hard" }
+    ];
+
+    const allQuizzes = [
+      { 
+        id: 1,
+        title: "ML Algorithms Quiz", 
+        questions: 20, 
+        time: "15 min", 
+        difficulty: "medium",
+        quizData: [
+          {
+            question: "What is supervised learning?",
+            options: [
+              "Learning with labeled training data",
+              "Learning without any data",
+              "Learning from unlabeled data only",
+              "Learning by trial and error"
+            ],
+            correct: 0
+          },
+          {
+            question: "Which algorithm is used for classification?",
+            options: [
+              "Linear Regression",
+              "K-Means Clustering",
+              "Decision Trees",
+              "PCA"
+            ],
+            correct: 2
+          },
+          {
+            question: "What does overfitting mean?",
+            options: [
+              "Model performs well on all data",
+              "Model is too simple",
+              "Model memorizes training data but fails on new data",
+              "Model has too few parameters"
+            ],
+            correct: 2
+          },
+          {
+            question: "What is the purpose of a validation set?",
+            options: [
+              "To train the model",
+              "To tune hyperparameters and prevent overfitting",
+              "To test final model performance",
+              "To collect more data"
+            ],
+            correct: 1
+          },
+          {
+            question: "Which metric is best for imbalanced classification?",
+            options: [
+              "Accuracy",
+              "F1 Score",
+              "Mean Squared Error",
+              "R-squared"
+            ],
+            correct: 1
+          }
+        ]
+      },
+      { 
+        id: 2,
+        title: "JavaScript Fundamentals", 
+        questions: 25, 
+        time: "20 min", 
+        difficulty: "easy",
+        quizData: [
+          {
+            question: "What keyword is used to declare a constant in JavaScript?",
+            options: ["var", "let", "const", "constant"],
+            correct: 2
+          },
+          {
+            question: "Which method adds an element to the end of an array?",
+            options: ["push()", "pop()", "shift()", "unshift()"],
+            correct: 0
+          },
+          {
+            question: "What does '===' check in JavaScript?",
+            options: [
+              "Value only",
+              "Type only",
+              "Both value and type",
+              "Neither value nor type"
+            ],
+            correct: 2
+          },
+          {
+            question: "How do you write a single-line comment in JavaScript?",
+            options: ["<!-- comment -->", "// comment", "/* comment */", "# comment"],
+            correct: 1
+          },
+          {
+            question: "What is the result of typeof null?",
+            options: ["'null'", "'undefined'", "'object'", "'number'"],
+            correct: 2
+          }
+        ]
+      },
+      { 
+        id: 3,
+        title: "Monte Carlo Methods", 
+        questions: 15, 
+        time: "12 min", 
+        difficulty: "hard",
+        quizData: [
+          {
+            question: "What is the main principle behind Monte Carlo methods?",
+            options: [
+              "Deterministic computation",
+              "Random sampling to obtain numerical results",
+              "Exact mathematical solutions",
+              "Symbolic computation"
+            ],
+            correct: 1
+          },
+          {
+            question: "Monte Carlo integration is most useful when:",
+            options: [
+              "The integral has a closed form",
+              "The dimension is low (1D or 2D)",
+              "The dimension is high and analytical solution is difficult",
+              "Exact answers are required"
+            ],
+            correct: 2
+          },
+          {
+            question: "What does the Law of Large Numbers guarantee?",
+            options: [
+              "Fast convergence",
+              "Sample mean converges to expected value",
+              "Zero variance",
+              "Exact results"
+            ],
+            correct: 1
+          },
+          {
+            question: "Variance reduction techniques in Monte Carlo include:",
+            options: [
+              "Using more random numbers",
+              "Importance sampling and control variates",
+              "Decreasing sample size",
+              "Using deterministic methods"
+            ],
+            correct: 1
+          },
+          {
+            question: "The convergence rate of basic Monte Carlo is:",
+            options: [
+              "O(1/n)",
+              "O(1/√n)",
+              "O(1/n²)",
+              "O(log n)"
+            ],
+            correct: 1
+          }
+        ]
+      },
+      { 
+        id: 4,
+        title: "Neural Networks Basics", 
+        questions: 18, 
+        time: "14 min", 
+        difficulty: "medium",
+        quizData: [
+          {
+            question: "What is an activation function?",
+            options: [
+              "A function that starts the network",
+              "A non-linear function applied to neuron outputs",
+              "A function that stops training",
+              "A loss function"
+            ],
+            correct: 1
+          },
+          {
+            question: "What is backpropagation?",
+            options: [
+              "Forward pass through the network",
+              "Algorithm to compute gradients for weight updates",
+              "A type of activation function",
+              "A regularization technique"
+            ],
+            correct: 1
+          },
+          {
+            question: "What does ReLU stand for?",
+            options: [
+              "Real Linear Unit",
+              "Rectified Linear Unit",
+              "Reverse Linear Unit",
+              "Random Linear Unit"
+            ],
+            correct: 1
+          },
+          {
+            question: "What is the vanishing gradient problem?",
+            options: [
+              "Gradients become too large",
+              "Gradients become very small in deep networks",
+              "No gradients are computed",
+              "Gradients are always zero"
+            ],
+            correct: 1
+          },
+          {
+            question: "What is dropout used for?",
+            options: [
+              "Increasing training speed",
+              "Regularization to prevent overfitting",
+              "Initializing weights",
+              "Computing loss"
+            ],
+            correct: 1
+          }
+        ]
+      },
+      { 
+        id: 5,
+        title: "HTML & CSS Essentials", 
+        questions: 30, 
+        time: "22 min", 
+        difficulty: "easy",
+        quizData: [
+          {
+            question: "What does HTML stand for?",
+            options: [
+              "Hyper Text Markup Language",
+              "High Tech Modern Language",
+              "Home Tool Markup Language",
+              "Hyperlinks and Text Markup Language"
+            ],
+            correct: 0
+          },
+          {
+            question: "Which CSS property controls text size?",
+            options: ["text-size", "font-size", "text-style", "font-style"],
+            correct: 1
+          },
+          {
+            question: "What is the correct HTML for creating a hyperlink?",
+            options: [
+              "<a url='http://example.com'>",
+              "<a href='http://example.com'>",
+              "<link>http://example.com</link>",
+              "<hyperlink>http://example.com</hyperlink>"
+            ],
+            correct: 1
+          },
+          {
+            question: "How do you make text bold in CSS?",
+            options: [
+              "font-weight: bold;",
+              "text-style: bold;",
+              "font: bold;",
+              "text-weight: bold;"
+            ],
+            correct: 0
+          },
+          {
+            question: "Which HTML tag is used for the largest heading?",
+            options: ["<heading>", "<h6>", "<h1>", "<head>"],
+            correct: 2
+          }
+        ]
+      }
     ];
 
     const subjects = [
@@ -539,6 +1661,118 @@
       { icon: "📊", name: "Simulation" },
       { icon: "💻", name: "Theory" }
     ];
+
+    const subjectDetails = [
+      {
+        icon: "🤖",
+        name: "Machine Learning",
+        decks: [
+          { title: "ML Basics", count: "45 cards" },
+          { title: "Neural Networks", count: "38 cards" },
+          { title: "Supervised Learning", count: "52 cards" }
+        ],
+        quizzes: [
+          { title: "ML Algorithms Quiz", count: "20 questions" },
+          { title: "Neural Networks Basics", count: "18 questions" }
+        ]
+      },
+      {
+        icon: "🌐",
+        name: "Web Development",
+        decks: [
+          { title: "Web Fundamentals", count: "60 cards" },
+          { title: "React Essentials", count: "42 cards" },
+          { title: "CSS Grid & Flexbox", count: "35 cards" }
+        ],
+        quizzes: [
+          { title: "JavaScript Fundamentals", count: "25 questions" },
+          { title: "Advanced React Patterns", count: "22 questions" }
+        ]
+      },
+      {
+        icon: "📊",
+        name: "Simulation",
+        decks: [
+          { title: "Simulation Theory", count: "30 cards" },
+          { title: "Monte Carlo Methods", count: "28 cards" }
+        ],
+        quizzes: [
+          { title: "Monte Carlo Methods", count: "15 questions" },
+          { title: "Simulation Modeling", count: "16 questions" }
+        ]
+      },
+      {
+        icon: "💻",
+        name: "Theory",
+        decks: [
+          { title: "Data Structures", count: "50 cards" },
+          { title: "Algorithms & Complexity", count: "55 cards" }
+        ],
+        quizzes: [
+          { title: "Data Structures Fundamentals", count: "28 questions" }
+        ]
+      }
+    ];
+
+    const blogPosts = [
+      {
+        icon: "📚",
+        category: "Study Tips",
+        title: "5 Effective Study Techniques for Tech Students",
+        excerpt: "Discover proven methods to improve retention and ace your exams.",
+        date: "March 15, 2024"
+      },
+      {
+        icon: "💡",
+        category: "Project Diaries",
+        title: "Building a Machine Learning Model from Scratch",
+        excerpt: "Follow along as we create a neural network step by step.",
+        date: "March 10, 2024"
+      },
+      {
+        icon: "🎯",
+        category: "Exam Prep",
+        title: "Last-Minute Exam Preparation Strategies",
+        excerpt: "Make the most of your final study hours with these tips.",
+        date: "March 5, 2024"
+      },
+      {
+        icon: "🚀",
+        category: "Study Tips",
+        title: "Spaced Repetition: The Science of Memory",
+        excerpt: "Learn why spacing out your study sessions leads to better results.",
+        date: "February 28, 2024"
+      }
+    ];
+
+    // Navigation function
+    function navigateToPage(pageName) {
+      // Hide all pages
+      document.querySelectorAll('.page-content').forEach(page => {
+        page.style.display = 'none';
+      });
+
+      // Show selected page
+      const targetPage = document.getElementById(`page-${pageName}`);
+      if (targetPage) {
+        targetPage.style.display = 'block';
+        currentPage = pageName;
+
+        // Render page-specific content
+        if (pageName === 'subjects') {
+          renderSubjectDetails();
+        } else if (pageName === 'flashcards') {
+          renderAllFlashcards();
+        } else if (pageName === 'quizzes') {
+          renderAllQuizzes();
+        } else if (pageName === 'blog') {
+          renderBlogPosts();
+        }
+
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
 
     function renderDecks() {
       const deckGrid = document.getElementById('deck-grid');
@@ -575,6 +1809,78 @@
       `).join('');
     }
 
+    function renderSubjectDetails() {
+      const grid = document.getElementById('subject-detail-grid');
+      grid.innerHTML = subjectDetails.map(subject => `
+        <div class="subject-detail-card">
+          <h2>
+            <span class="subject-icon">${subject.icon}</span>
+            ${subject.name}
+          </h2>
+          <h3>Flashcard Decks</h3>
+          <div class="subject-content">
+            ${subject.decks.map(deck => `
+              <div class="subject-item">
+                <h4>${deck.title}</h4>
+                <p>${deck.count}</p>
+              </div>
+            `).join('')}
+          </div>
+          <h3 style="margin-top: 1.5rem;">Quizzes</h3>
+          <div class="subject-content">
+            ${subject.quizzes.map(quiz => `
+              <div class="subject-item">
+                <h4>${quiz.title}</h4>
+                <p>${quiz.count}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderAllFlashcards(filter = 'all') {
+      const grid = document.getElementById('flashcards-grid');
+      const filtered = filter === 'all' ? allDecks : allDecks.filter(d => d.subject === filter);
+      grid.innerHTML = filtered.map(deck => `
+        <div class="deck-card">
+          <div class="deck-icon">${deck.icon}</div>
+          <h3 class="deck-title">${deck.title}</h3>
+          <p class="deck-meta">${deck.cards} cards</p>
+          <span class="deck-subject">${deck.subject}</span>
+        </div>
+      `).join('');
+    }
+
+    function renderAllQuizzes(filter = 'all') {
+      const list = document.getElementById('quizzes-list');
+      const filtered = filter === 'all' ? allQuizzes : allQuizzes.filter(q => q.difficulty === filter);
+      list.innerHTML = filtered.map(quiz => `
+        <div class="quiz-item">
+          <div class="quiz-info">
+            <h3 class="quiz-title">${quiz.title}</h3>
+            <p class="quiz-stats">${quiz.questions} questions • ${quiz.time} • ${quiz.difficulty}</p>
+          </div>
+          <button class="quiz-btn">Take Quiz</button>
+        </div>
+      `).join('');
+    }
+
+    function renderBlogPosts() {
+      const grid = document.getElementById('blog-grid');
+      grid.innerHTML = blogPosts.map(post => `
+        <div class="blog-card">
+          <div class="blog-image">${post.icon}</div>
+          <div class="blog-content">
+            <span class="blog-category">${post.category}</span>
+            <h3 class="blog-title">${post.title}</h3>
+            <p class="blog-excerpt">${post.excerpt}</p>
+            <p class="blog-meta">${post.date}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
     function showToast(message) {
       const toast = document.getElementById('toast');
       toast.textContent = message;
@@ -592,13 +1898,51 @@
       e.target.reset();
     });
 
+    // Contact form handler
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      showToast('Message sent! We\'ll get back to you soon.');
+      e.target.reset();
+    });
+
     // CTA button handlers
     document.getElementById('cta-primary').addEventListener('click', () => {
-      showToast('Redirecting to quizzes...');
+      navigateToPage('quizzes');
     });
 
     document.getElementById('cta-secondary').addEventListener('click', () => {
-      showToast('Redirecting to flashcards...');
+      navigateToPage('flashcards');
+    });
+
+    // Logo click handler
+    document.getElementById('site-name').addEventListener('click', () => {
+      navigateToPage('home');
+    });
+
+    // Navigation link handlers
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const page = e.target.getAttribute('data-page');
+        navigateToPage(page);
+      });
+    });
+
+    // Filter button handlers for flashcards page
+    document.addEventListener('click', (e) => {
+      if (e.target.classList.contains('filter-btn')) {
+        const parent = e.target.parentElement;
+        parent.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        e.target.classList.add('active');
+        
+        const filter = e.target.getAttribute('data-filter');
+        
+        if (currentPage === 'flashcards') {
+          renderAllFlashcards(filter);
+        } else if (currentPage === 'quizzes') {
+          renderAllQuizzes(filter);
+        }
+      }
     });
 
     async function onConfigChange(config) {
@@ -650,6 +1994,270 @@
       document.getElementById('newsletter-title').textContent = config.newsletter_title || defaultConfig.newsletter_title;
       document.getElementById('newsletter-description').textContent = config.newsletter_description || defaultConfig.newsletter_description;
       document.getElementById('newsletter-button').textContent = config.newsletter_button || defaultConfig.newsletter_button;
+    }
+
+    // Quiz state
+    let currentQuiz = null;
+    let currentQuestionIndex = 0;
+    let selectedAnswer = null;
+    let quizScore = 0;
+    let answeredQuestions = [];
+
+    // Flashcard state
+    let currentDeck = null;
+    let currentCardIndex = 0;
+    let isFlipped = false;
+
+    // Quiz functions
+    function startQuiz(quizId) {
+      currentQuiz = allQuizzes.find(q => q.id === quizId);
+      if (!currentQuiz) return;
+
+      currentQuestionIndex = 0;
+      selectedAnswer = null;
+      quizScore = 0;
+      answeredQuestions = [];
+
+      navigateToPage('quiz-player');
+      renderQuizQuestion();
+    }
+
+    function renderQuizQuestion() {
+      const content = document.getElementById('quiz-content');
+      const question = currentQuiz.quizData[currentQuestionIndex];
+      
+      const progressPercent = ((currentQuestionIndex + 1) / currentQuiz.quizData.length) * 100;
+      document.getElementById('quiz-progress-text').textContent = 
+        `Question ${currentQuestionIndex + 1} of ${currentQuiz.quizData.length}`;
+      document.getElementById('quiz-progress-fill').style.width = `${progressPercent}%`;
+
+      content.innerHTML = `
+        <div class="quiz-question-card">
+          <h2 class="question-text">${question.question}</h2>
+          <div class="quiz-options">
+            ${question.options.map((option, index) => `
+              <button class="quiz-option" data-index="${index}">
+                ${option}
+              </button>
+            `).join('')}
+          </div>
+          <div id="quiz-feedback"></div>
+          <div class="quiz-actions" style="display: none;">
+            <button class="btn btn-primary" id="next-question-btn">
+              ${currentQuestionIndex < currentQuiz.quizData.length - 1 ? 'Next Question' : 'See Results'}
+            </button>
+          </div>
+        </div>
+      `;
+
+      // Add option click handlers
+      document.querySelectorAll('.quiz-option').forEach(option => {
+        option.addEventListener('click', handleAnswerSelect);
+      });
+    }
+
+    function handleAnswerSelect(e) {
+      if (selectedAnswer !== null) return; // Already answered
+
+      const selectedIndex = parseInt(e.target.getAttribute('data-index'));
+      selectedAnswer = selectedIndex;
+
+      const question = currentQuiz.quizData[currentQuestionIndex];
+      const isCorrect = selectedIndex === question.correct;
+
+      if (isCorrect) {
+        quizScore++;
+      }
+
+      answeredQuestions.push({
+        question: question.question,
+        selected: selectedIndex,
+        correct: question.correct,
+        isCorrect
+      });
+
+      // Update UI
+      document.querySelectorAll('.quiz-option').forEach((option, index) => {
+        option.classList.add('disabled');
+        if (index === question.correct) {
+          option.classList.add('correct');
+        } else if (index === selectedIndex && !isCorrect) {
+          option.classList.add('incorrect');
+        }
+      });
+
+      // Show feedback
+      const feedback = document.getElementById('quiz-feedback');
+      feedback.className = `quiz-feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+      feedback.textContent = isCorrect ? '✓ Correct!' : '✗ Incorrect. The correct answer is highlighted.';
+
+      // Show next button
+      document.querySelector('.quiz-actions').style.display = 'flex';
+      document.getElementById('next-question-btn').addEventListener('click', handleNextQuestion);
+    }
+
+    function handleNextQuestion() {
+      if (currentQuestionIndex < currentQuiz.quizData.length - 1) {
+        currentQuestionIndex++;
+        selectedAnswer = null;
+        renderQuizQuestion();
+      } else {
+        showQuizResults();
+      }
+    }
+
+    function showQuizResults() {
+      const content = document.getElementById('quiz-content');
+      const percentage = Math.round((quizScore / currentQuiz.quizData.length) * 100);
+      
+      let message = '';
+      if (percentage >= 90) message = 'Outstanding! 🎉';
+      else if (percentage >= 70) message = 'Great job! 👏';
+      else if (percentage >= 50) message = 'Good effort! 👍';
+      else message = 'Keep practicing! 💪';
+
+      content.innerHTML = `
+        <div class="quiz-results">
+          <h2>Quiz Complete!</h2>
+          <div class="results-score">${percentage}%</div>
+          <p class="results-message">${message}</p>
+          <div class="results-stats">
+            <div class="stat-item">
+              <div class="stat-value">${quizScore}</div>
+              <div class="stat-label">Correct</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">${currentQuiz.quizData.length - quizScore}</div>
+              <div class="stat-label">Incorrect</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">${currentQuiz.quizData.length}</div>
+              <div class="stat-label">Total</div>
+            </div>
+          </div>
+          <div class="quiz-actions">
+            <button class="btn btn-secondary" id="retry-quiz-btn">Retry Quiz</button>
+            <button class="btn btn-primary" id="back-to-quizzes-btn">Back to Quizzes</button>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('retry-quiz-btn').addEventListener('click', () => {
+        startQuiz(currentQuiz.id);
+      });
+
+      document.getElementById('back-to-quizzes-btn').addEventListener('click', () => {
+        navigateToPage('quizzes');
+      });
+    }
+
+    // Flashcard functions
+    function startFlashcards(deckId) {
+      currentDeck = allDecks.find(d => d.id === deckId);
+      if (!currentDeck || !currentDeck.flashcards) return;
+
+      currentCardIndex = 0;
+      isFlipped = false;
+
+      navigateToPage('flashcard-player');
+      renderFlashcard();
+    }
+
+    function renderFlashcard() {
+      const card = currentDeck.flashcards[currentCardIndex];
+      
+      document.getElementById('flashcard-progress-text').textContent = 
+        `Card ${currentCardIndex + 1} of ${currentDeck.flashcards.length}`;
+      
+      document.getElementById('flashcard-question').textContent = card.question;
+      document.getElementById('flashcard-answer').textContent = card.answer;
+
+      // Reset flip state
+      const flashcard = document.getElementById('flashcard');
+      flashcard.classList.remove('flipped');
+      isFlipped = false;
+
+      // Update button states
+      document.getElementById('prev-card-btn').disabled = currentCardIndex === 0;
+      document.getElementById('next-card-btn').disabled = currentCardIndex === currentDeck.flashcards.length - 1;
+    }
+
+    function flipCard() {
+      const flashcard = document.getElementById('flashcard');
+      flashcard.classList.toggle('flipped');
+      isFlipped = !isFlipped;
+    }
+
+    function nextCard() {
+      if (currentCardIndex < currentDeck.flashcards.length - 1) {
+        currentCardIndex++;
+        renderFlashcard();
+      }
+    }
+
+    function prevCard() {
+      if (currentCardIndex > 0) {
+        currentCardIndex--;
+        renderFlashcard();
+      }
+    }
+
+    // Event listeners for quiz and flashcard players
+    document.getElementById('quiz-back-btn').addEventListener('click', () => {
+      navigateToPage('quizzes');
+    });
+
+    document.getElementById('flashcard-back-btn').addEventListener('click', () => {
+      navigateToPage('flashcards');
+    });
+
+    document.getElementById('flashcard').addEventListener('click', flipCard);
+    document.getElementById('prev-card-btn').addEventListener('click', prevCard);
+    document.getElementById('next-card-btn').addEventListener('click', nextCard);
+
+    // Update quiz list rendering to include click handlers
+    function renderAllQuizzes(filter = 'all') {
+      const list = document.getElementById('quizzes-list');
+      const filtered = filter === 'all' ? allQuizzes : allQuizzes.filter(q => q.difficulty === filter);
+      list.innerHTML = filtered.map(quiz => `
+        <div class="quiz-item">
+          <div class="quiz-info">
+            <h3 class="quiz-title">${quiz.title}</h3>
+            <p class="quiz-stats">${quiz.quizData.length} questions • ${quiz.time} • ${quiz.difficulty}</p>
+          </div>
+          <button class="quiz-btn" data-quiz-id="${quiz.id}">Take Quiz</button>
+        </div>
+      `).join('');
+
+      // Add click handlers
+      document.querySelectorAll('.quiz-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const quizId = parseInt(e.target.getAttribute('data-quiz-id'));
+          startQuiz(quizId);
+        });
+      });
+    }
+
+    // Update flashcard rendering to include click handlers
+    function renderAllFlashcards(filter = 'all') {
+      const grid = document.getElementById('flashcards-grid');
+      const filtered = filter === 'all' ? allDecks : allDecks.filter(d => d.subject === filter);
+      grid.innerHTML = filtered.map(deck => `
+        <div class="deck-card" data-deck-id="${deck.id}">
+          <div class="deck-icon">${deck.icon}</div>
+          <h3 class="deck-title">${deck.title}</h3>
+          <p class="deck-meta">${deck.flashcards ? deck.flashcards.length : deck.cards} cards</p>
+          <span class="deck-subject">${deck.subject}</span>
+        </div>
+      `).join('');
+
+      // Add click handlers
+      document.querySelectorAll('.deck-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+          const deckId = parseInt(e.currentTarget.getAttribute('data-deck-id'));
+          startFlashcards(deckId);
+        });
+      });
     }
 
     // Initialize
@@ -730,5 +2338,5 @@
       });
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99af46f435ae3366',t:'MTc2MjU0NDE2Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99af5e1536f43366',t:'MTc2MjU0NTEwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
